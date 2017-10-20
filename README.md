@@ -1,6 +1,9 @@
 # multipagevue
 
 > A Vue.js project
+## vue多页面架子
+
+#### vue-cli可以生产单页面单页面应用,vue init webpack projectname  在此基础上改为多页面应用 
 
 ## Build Setup
 
