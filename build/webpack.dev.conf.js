@@ -7,6 +7,7 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const glob = require('glob')
+const MyPlugin = require('./MyPlugin')
 var startTime = new Date().getTime()
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -28,6 +29,12 @@ module.exports = merge(baseWebpackConfig, {
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
   plugins: [
+    new MyPlugin({
+      paths: [
+        // '/api_yx/main.js?timestamp=' + new Date().getTime(),
+        '/static/js/main.js?timestamp=' + new Date().getTime()
+      ]
+    }),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
