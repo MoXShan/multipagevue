@@ -39,9 +39,10 @@ MyPlugin.prototype.apply = function (compiler) {
     removeAttributeQuotes: true
   })
   // 浏览器升级:页面内容:DOM
-  let jsdom = require('jsdom').jsdom
+  let jsdom = require('jsdom')
+  const { JSDOM } = jsdom
   // 返回dom
-  let updateSnippetDocument = jsdom(updateSnippet)
+  let updateSnippetDocument = new JSDOM(updateSnippet)
 
   // ##
   // CNZZ 网站统计
@@ -69,7 +70,7 @@ MyPlugin.prototype.apply = function (compiler) {
       }
 
       // console.log(htmlPluginData);
-      let env = require('jsdom').env
+      let env = require('jsdom/lib/old-api.js').env
       let html = htmlPluginData.html
       // first argument can be html string, filename, or url
       env(html, function (errors, window) {
