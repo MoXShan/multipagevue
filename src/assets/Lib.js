@@ -3,7 +3,7 @@
 import 'assets/http'
 // import Auth from 'assets/auth'
 import Refreshsh from 'assets/plugin/refresh'
-
+import * as filters from 'assets/filters'
 // ##
 // Common CSS
 // http://fontawesome.io/ 图标css文件
@@ -18,3 +18,8 @@ Vue.use(Element)
 // ##
 // 自定义插件
 Vue.use(Refreshsh)
+console.info(filters)
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
