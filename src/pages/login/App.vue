@@ -44,7 +44,6 @@
 </template>
 
 <script>
-  import 'assets/Lib'
   import YxyFooter from 'components/YxyFooter'
   import YxyHeaderOuter from 'components/YxyHeaderOuter'
   import ls from 'local-storage'

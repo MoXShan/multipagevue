@@ -7,11 +7,11 @@
     <el-col :span="21">
       <el-menu mode="horizontal" class="el-menu--maininner" style="text-align: center">
         <el-menu-item index="1" v-if="permissions.indexOf('0000000') !== -1">
-          <a href="/module/manage/teachingresearch/lessons/topiclessons/lessonmng.html">用户信息管理</a>
+          <a href="/">用户信息管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="2" v-bind:class="isActiveTeaching ? 'is-active': ''" v-if="permissions.indexOf('1000000') !== -1">
-          <a href="/module/manage/teachingresearch.html">教学管理</a>
+          <a href="/">教学管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="3" v-if="permissions.indexOf('2000000') !== -1">
@@ -19,15 +19,15 @@
           <span></span>
         </el-menu-item>
         <el-menu-item index="4" v-if="permissions.indexOf('3000000') !== -1">
-          <a href="/module/manage/huodong/teacherday17.html">活动管理</a>
+          <a href="/">活动管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="5" v-if="permissions.indexOf('4000000') !== -1">
-          <a href="/module/manage/operation.html">业务管理</a>
+          <a href="/">业务管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="6" v-bind:class="isActiveIncome ? 'is-active': ''" v-if="permissions.indexOf('5000000') !== -1">
-          <a href="/module/manage/income.html">收入管理</a>
+          <a href="/">收入管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="7" v-if="permissions.indexOf('6000000') !== -1">
@@ -47,19 +47,19 @@
           <span></span>
         </el-menu-item>
         <el-menu-item index="11" v-bind:class="isActiveAuthorize ? 'is-active': ''" v-if="permissions.indexOf('A000000') !== -1">
-          <a href="/module/manage/authorize.html">权限管理</a>
+          <a href="/">权限管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="12" v-bind:class="isActiveSource ? 'is-active': ''" v-if="permissions.indexOf('A100000') !== -1">
-          <a href="/module/manage/source.html">数据管理</a>
+          <a href="/">数据管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="12" v-bind:class="isActiveBaseInfo ? 'is-active': ''" v-if="permissions.indexOf('A100000') !== -1">
-          <a href="/module/manage/baseinfo.html">基本信息管理</a>
+          <a href="/">基本信息管理</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="13" v-bind:class="isActiveContents ? 'is-active': ''">
-          <a href="/module/manage/contents.html">内容管理</a>
+          <a href="/">内容管理</a>
           <span></span>
         </el-menu-item>
       </el-menu>
@@ -68,17 +68,18 @@
 </template>
 
 <script>
-  import Lib from 'assets/Lib'
+  import 'assets/Lib'
   export default {
     data () {
       return {
+        permissions: ['0000000', '1000000', '2000000', '3000000', '4000000', '5000000', '60000000', '70000000', '80000000', '90000000', 'A000000', 'A100000'],
         pojo: {
           hasDomain: false,
           isSchool: false,
           domainName: ''
         },
         roleInfo: {},
-        user: Object.assign({}, Lib.Auth.user),
+        user: {},
         isActiveEdu1: false,
         isActiveEdu2: false,
         isActiveSch1: false,

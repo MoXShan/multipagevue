@@ -54,27 +54,28 @@
 </template>
 
 <script>
-  import Lib from 'assets/Lib'
-
+  import ls from 'local-storage'
   export default {
     data () {
       return {
         user: {
-          workSpace: ''
+          workSpace: '',
+          authenticated: true,
+          nickname: 'Json'
         }
       }
     },
     components: {
     },
     mounted () {
-      Lib.Auth.currentUser(this)
-      this.$_czc_common_statistic()
+      if (!ls('login')) {
+        window.location.href = '/'
+      }
     },
     methods: {
       logout () {
-        console.log('logout')
-        Lib.Auth.logout(this)
-        this.authenticated = Lib.Auth.checkAuth()
+        ls.clear()
+        window.location.href = '/'
       }
     }
   }

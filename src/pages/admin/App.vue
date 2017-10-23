@@ -1,15 +1,28 @@
 <template>
   <div id="app" >
-        <router-view></router-view>
+    <yxy-header-inner></yxy-header-inner>
+      <div class="container">
+          <router-view></router-view>
+      </div>
+    <yxy-footer></yxy-footer>
   </div>
 </template>
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script>
+import YxyHeaderInner from 'components/YxyHeaderInner'
+import YxyFooter from 'components/YxyFooter'
+export default {
+  data () {
+    return {}
+  },
+  components: {
+    YxyFooter,
+    YxyHeaderInner
+  }
+}
+</script>
+
+<style scoped>
+.container {
+  min-height: 500px;
 }
 </style>

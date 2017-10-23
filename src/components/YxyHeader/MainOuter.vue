@@ -33,6 +33,10 @@
               <a href="/">统计分析</a>
               <span></span>
             </el-menu-item>
+            <el-menu-item index="6">
+              <a href="/pages/admin.html">后台管理</a>
+              <span></span>
+            </el-menu-item>
           </el-menu>
         </el-col>
       </el-row>
@@ -41,6 +45,7 @@
 </template>
 
 <script>
+  import 'assets/Lib'
   export default {
     data () {
       return {

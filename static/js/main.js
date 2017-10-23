@@ -3,10 +3,10 @@ var jss = [
 ]
 for (var i = 0; i < jss.length; i++) {
   try {
-    var e = document.createElement('script');
-    e.src = jss[i];
-    document.body.appendChild(e);
+    var e = document.createElement('script')
+    e.src = jss[i]
+    document.body.appendChild(e)
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }
