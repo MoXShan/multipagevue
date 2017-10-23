@@ -1,7 +1,5 @@
 // ## 公共配置
 // Common JS,Conf
-import C from 'assets/conf'
-import M from 'assets/common'
 import 'assets/http'
 // import Auth from 'assets/auth'
 import Refreshsh from 'assets/plugin/refresh'
@@ -20,8 +18,3 @@ Vue.use(Element)
 // ##
 // 自定义插件
 Vue.use(Refreshsh)
-
-// ##
-export default {
-  M, C
-}

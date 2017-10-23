@@ -1,3 +1,4 @@
+// axios 的配置文件 axios本身不是vue的插件  不能使用vue.use()的方法使用  使用Vue.prototype.$http = service 全局注册 之后使用this.$http.get()....
 import axios from 'axios'
 import Vue from 'vue'
 import { Message } from 'element-ui'

@@ -19,7 +19,8 @@
       YxyFooter
     },
     mounted () {
-
+      // 插件的调用的方法
+      this.$_jwt_refresh(this, '0')
     },
     methods: {
       test () {

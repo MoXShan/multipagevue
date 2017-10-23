@@ -1,5 +1,5 @@
 // ##
-// 公共配置
+// 公共类 那调用那里引用
 var Rxports = {}
 /* no-extend-native */
 // 日期格式化

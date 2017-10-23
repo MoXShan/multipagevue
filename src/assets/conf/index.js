@@ -1,4 +1,4 @@
- // 公共配置文件
+ // 公共配置文件 那里需要那里引用
 const { SCHEME, HOSTNAME } =
 process.env.NODE_ENV === 'production'
 ? {SCHEME: 'http', HOSTNAME: window.location.hostname + (window.location.port ? ':' + window.location.port : '')}
