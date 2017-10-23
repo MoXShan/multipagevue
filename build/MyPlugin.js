@@ -55,7 +55,6 @@ MyPlugin.prototype.apply = function (compiler) {
   let timestamp = new Date().getTime()
   // compile（'编译器'对'开始编译'这个事件的监听） 可以监听不同的事件
   compiler.plugin('compile', function (params) {
-    console.info(params)
     console.log("The compiler is starting to compile...")
   })
   // compilation 编译ing事件

@@ -50,7 +50,7 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     // friendly-errors-webpack-plugin用于更友好地输出webpack的警告、错误等信息
-    // new FriendlyErrorsPlugin(),
+    new FriendlyErrorsPlugin(),
     // 报错但不退出webpack进程
     new webpack.NoErrorsPlugin()
   ]
