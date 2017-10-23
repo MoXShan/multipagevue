@@ -45,5 +45,6 @@
 <style>
 .container{
   min-height: 500px;
+  text-align: center;
 }
 </style>

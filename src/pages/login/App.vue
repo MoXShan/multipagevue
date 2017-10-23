@@ -2,7 +2,7 @@
   <div id="login" class="login">
     <yxy-header-outer></yxy-header-outer>
     <div class="main-img">
-      <el-row v-if="!authenticated" style="padding-top: 100px;min-height:730px;">
+      <el-row v-if="!authenticated" style="padding-top: 100px;min-height:500px;">
         <div class="main-center">
           <el-card class="box-card">
             <div class="clearfix" style="text-align:center">
@@ -29,10 +29,10 @@
                 </el-input>
               </el-form-item>
               <el-form-item>
-                <a href="#" class="wang">找回密码</a>
+                <a href="/" class="wang">找回密码</a>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="login" :loading="login_loading" style="width:360px;">提交</el-button>
+                <el-button type="primary" @click="login('credentials')" :loading="login_loading" style="width:360px;">提交</el-button>
               </el-form-item>
             </el-form>
           </el-card>
@@ -44,14 +44,15 @@
 </template>
 
 <script>
-  // import Lib from 'assets/Lib'
+  import 'assets/Lib'
   import YxyFooter from 'components/YxyFooter'
   import YxyHeaderOuter from 'components/YxyHeaderOuter'
-
+  import ls from 'local-storage'
   export default {
     data () {
       return {
         user: {},
+        authenticated: false,
         login_loading: false,
         credentials: {
           username: '',
@@ -72,31 +73,38 @@
       YxyHeaderOuter
     },
     mounted () {
-      if (this.authenticated) {
-        window.location.replace('/')
+      if (ls('login')) {
+        this.$message({
+          message: '已经登录',
+          duration: 2000,
+          type: 'success',
+          onClose: function () {
+            window.location.href = '/'
+          }
+        })
       }
     },
     methods: {
-      login () {
-        const _self = this
-        this.$refs.credentials.validate((valid) => {
+      login (credentials) {
+        console.info('......................')
+        const vm = this
+        this.$refs[credentials].validate((valid) => {
           if (valid) {
-            this.login_loading = true
-            this.$message({
+            vm.login_loading = true
+            vm.$message({
               message: '正在登录...',
+              duration: 3000,
               onClose () {
-                _self.login_loading = false
+                ls('login', true)
+                window.location.href = '/'
               }
             })
-            // if (this.credentials.username && this.credentials.password) {
-            // Lib.Auth.login(this, {
-            //   username: this.credentials.username,
-            //   password: this.credentials.password
-            // }, '/')
-            this.errors = {username: '', password: ''}
-            // }
           } else {
-            console.log('error submit!!')
+            vm.$refs[credentials].resetFields()
+            vm.$message({
+              message: '请重新登录',
+              duration: 2000
+            })
             return false
           }
         })

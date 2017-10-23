@@ -11,10 +11,10 @@
             </a>
           </li>
           <li v-if="user.authenticated">
-            <a href="/module/manage.html">工作空间<span class="shu">|</span></a>
+            <a href="/">工作空间<span class="shu">|</span></a>
           </li>
           <li v-if="!user.authenticated">
-            <a href="/module/auth/login.html">
+            <a href="/pages/login.html">
               <i class="fa fa-user" aria-hidden="true"></i>
               登录</a></li>
           <li v-if="user.authenticated">
@@ -25,7 +25,7 @@
               </a>
               <el-dropdown-menu slot="dropdown" class="parson">
                 <el-dropdown-item>
-                  <a href="/module/personal/profile.html">
+                  <a href="/">
                     <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     <span>个人设置</span>
                   </a>
@@ -47,11 +47,14 @@
 </template>
 
 <script>
+  import ls from 'local-storage'
   export default {
     data () {
       return {
         user: {
-          workSpace: ''
+          workSpace: '',
+          authenticated: ls('login'),
+          nickname: 'Json'
         }
       }
     },
@@ -61,7 +64,8 @@
     },
     methods: {
       logout () {
-        console.log('logout')
+        this.user.authenticated = false
+        ls.clear()
       }
     }
   }

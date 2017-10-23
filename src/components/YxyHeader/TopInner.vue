@@ -18,9 +18,9 @@
               <span>欢迎您 , {{user.nickname}}<span class="shu">|</span></span>
             </a>
           </li>
-          <li v-if="user.authenticated"><a href="/module/manage.html" class="gongzuo">工作空间<span class="shu">|</span></a>
+          <li v-if="user.authenticated"><a href="/" class="gongzuo">工作空间<span class="shu">|</span></a>
           </li>
-          <li v-if="!user.authenticated"><a href="/module/auth/login.html">登录</a></li>
+          <li v-if="!user.authenticated"><a href="/pages/login.html">登录</a></li>
           <li v-if="user.authenticated" class="parson">
             <el-dropdown trigger="click">
               <a href="javascript:void(0);" @click="logout" class="el-dropdown-link">
