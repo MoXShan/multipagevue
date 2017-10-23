@@ -1,8 +1,8 @@
-// ##
+// ## 公共配置
 // Common JS,Conf
 import C from 'assets/conf'
 import M from 'assets/common'
-// import H from 'assets/http'
+import 'assets/http'
 // import Auth from 'assets/auth'
 import Refreshsh from 'assets/plugin/refresh'
 

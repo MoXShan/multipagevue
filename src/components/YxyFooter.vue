@@ -1,8 +1,8 @@
 <template>
   <footer id="footer" class="text-center">
     <p style="font-size:14px;margin-bottom: 15px;">&copy;2016-2017 {{copyright}}</p>
-    <p style="font-size:14px;margin-top: 8px;">客服电话: 400-686-1391</p>
-    <p style="font-size:14px;margin-top: 8px;">技术支持：云校（北京）科技有限公司</p>
+    <p style="font-size:14px;margin-top: 8px;">客服电话: * * * * * * * </p>
+    <p style="font-size:14px;margin-top: 8px;">技术支持：* * * * * * *</p>
   </footer>
 </template>
 
@@ -10,6 +10,7 @@
   export default {
     data () {
       return {
+        copyright: 'footer'
       }
     }
   }

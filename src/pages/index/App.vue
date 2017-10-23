@@ -2,23 +2,34 @@
   <div id="app" >
         <img src="../../assets/logo.png">
         <el-button>默认按钮</el-button>
-        <el-button type="primary">主要按钮</el-button>
+        <el-button type="primary"  @click='test'>主要按钮</el-button>
         <el-button type="text">文字按钮</el-button>
+        <yxy-footer></yxy-footer>
   </div>
 </template>
 <script>
   import 'assets/Lib'
-
+  import YxyFooter from 'components/YxyFooter'
   export default {
     data () {
       return {
       }
     },
     components: {
+      YxyFooter
     },
     mounted () {
+
     },
-    methods: {}
+    methods: {
+      test () {
+        this.$http.get('/api_yw/comm/weike/subject', {params: {stage: '01'}}).then(res => {
+          console.info(res)
+        }).catch((res) => {
+          console.log(res)
+        })
+      }
+    }
   }
 </script>
 <style>

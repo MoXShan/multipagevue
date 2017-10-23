@@ -31,7 +31,12 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 代理配置 以/api_yw 开头的路径将映射到目标上去
+    proxyTable: {
+      '/api_yw': {
+        target: 'http://localhost:9083',
+        changeOrigin: true
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
