@@ -47,8 +47,6 @@
 </template>
 
 <script>
-  // import Lib from 'assets/Lib'
-
   export default {
     data () {
       return {
@@ -60,14 +58,10 @@
     components: {
     },
     mounted () {
-      // Lib.Auth.currentUser(this)
-      this.$_czc_common_statistic()
     },
     methods: {
       logout () {
         console.log('logout')
-        // Lib.Auth.logout(this)
-        // this.authenticated = Lib.Auth.checkAuth()
       }
     }
   }

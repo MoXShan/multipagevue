@@ -6,6 +6,7 @@ import Refreshsh from 'assets/plugin/refresh'
 import * as filters from 'assets/filters'
 // ##
 // Common CSS
+import 'assets/css.css'
 // http://fontawesome.io/ 图标css文件
 import 'node_modules/font-awesome/css/font-awesome.css'
 // element-ui 的css文件
