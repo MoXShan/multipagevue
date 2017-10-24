@@ -3,7 +3,7 @@
 > A Vue.js project
 ## vue多页面架子
 
-#### vue-cli可以生产单页面单页面应用,vue init webpack projectname  在此基础上改为多页面应用 
+#### vue-cli可以生产单页面单页面应用,vue init webpack projectname  在此基础上改为多页面应用 增加了一些通用的配置 如element-ui、axios、多页面配置、webpack自定义插件、vue自定义插件。
 
 ## Build Setup
 
