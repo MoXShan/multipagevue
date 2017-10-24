@@ -3,8 +3,8 @@
     <div class="container">
       <el-row :span="24">
         <el-col :span="5">
-          <a href="/#" v-if="logo">
-            <img class="logo" :src="logo" alt="logo" style="margin-top:-3px;max-height:50px !important;">
+          <a href="/#">
+            <img class="logo" src="/static/img/logo.png" alt="logo" style="margin-top:-3px;max-height:50px !important;">
           </a>
         </el-col>
         <el-col :span="18" :offset="1" class="pull-right">
@@ -14,23 +14,23 @@
               <span></span>
             </el-menu-item>
             <el-menu-item index="2">
-              <a href="/">OA办公</a>
+              <a href="/">标题一</a>
               <span></span>
             </el-menu-item>
             <el-menu-item index="3">
-              <a href="/">资源管理</a>
+              <a href="/">标题二</a>
               <span></span>
             </el-menu-item>
             <el-menu-item index="4">
-              <a href="/">运营管理</a>
+              <a href="/">标题三</a>
               <span></span>
             </el-menu-item>
             <el-menu-item index="5">
-              <a href="/">教学管理</a>
+              <a href="/">标题四</a>
               <span></span>
             </el-menu-item>
             <el-menu-item index="6">
-              <a href="/">统计分析</a>
+              <a href="/">标题五</a>
               <span></span>
             </el-menu-item>
             <el-menu-item index="6">
@@ -55,8 +55,7 @@
         isActive4: false,
         isActive5: false,
         isActive6: false,
-        isActive7: false,
-        logo: 'http://yxcsp.91yunxiao.com/yxcsp/pull/49f1e167b6d91337c659276c8d83e205.png'
+        isActive7: false
       }
     },
     mounted () {

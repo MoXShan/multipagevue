@@ -2,64 +2,64 @@
   <nav id="main-inner">
     <el-col :span="3" class="img-logo">
       &nbsp;
-      <a href="/" class="main-title">云校管理后台</a>
+      <a href="/" class="main-title">后台管理</a>
     </el-col>
     <el-col :span="21">
       <el-menu mode="horizontal" class="el-menu--maininner" style="text-align: center">
         <el-menu-item index="1" v-if="permissions.indexOf('0000000') !== -1">
-          <a href="/">用户信息管理</a>
+          <a href="/">标题一</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="2" v-bind:class="isActiveTeaching ? 'is-active': ''" v-if="permissions.indexOf('1000000') !== -1">
-          <a href="/">教学管理</a>
+          <a href="/">标题二</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="3" v-if="permissions.indexOf('2000000') !== -1">
-          <a href="/">内容管理</a>
+          <a href="/">标题三</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="4" v-if="permissions.indexOf('3000000') !== -1">
-          <a href="/">活动管理</a>
+          <a href="/">标题四</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="5" v-if="permissions.indexOf('4000000') !== -1">
-          <a href="/">业务管理</a>
+          <a href="/">标题五</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="6" v-bind:class="isActiveIncome ? 'is-active': ''" v-if="permissions.indexOf('5000000') !== -1">
-          <a href="/">收入管理</a>
+          <a href="/">标题六</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="7" v-if="permissions.indexOf('6000000') !== -1">
-          <a href="/">平台管理</a>
+          <a href="/">标题七</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="8" v-if="permissions.indexOf('7000000') !== -1">
-          <a href="/">统计分析</a>
+          <a href="/">标题八</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="9" v-if="permissions.indexOf('8000000') !== -1">
-          <a href="/">反馈管理</a>
+          <a href="/">标题九</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="10" v-if="permissions.indexOf('9000000') !== -1">
-          <a href="/">区域管理</a>
+          <a href="/">标题十</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="11" v-bind:class="isActiveAuthorize ? 'is-active': ''" v-if="permissions.indexOf('A000000') !== -1">
-          <a href="/">权限管理</a>
+          <a href="/">标题十一</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="12" v-bind:class="isActiveSource ? 'is-active': ''" v-if="permissions.indexOf('A100000') !== -1">
-          <a href="/">数据管理</a>
+          <a href="/">标题十二</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="12" v-bind:class="isActiveBaseInfo ? 'is-active': ''" v-if="permissions.indexOf('A100000') !== -1">
-          <a href="/">基本信息管理</a>
+          <a href="/">标题十三</a>
           <span></span>
         </el-menu-item>
         <el-menu-item index="13" v-bind:class="isActiveContents ? 'is-active': ''">
-          <a href="/">内容管理</a>
+          <a href="/">标题十四</a>
           <span></span>
         </el-menu-item>
       </el-menu>
@@ -100,8 +100,7 @@
         isActiveIncome: false,
         isActiveSource: false,
         isActiveBaseInfo: false,
-        isActiveContents: false,
-        logo: 'http://yxcsp.91yunxiao.com/yxcsp/pull/5bac8ab9c4af1255e25a7cd738488df4.png'
+        isActiveContents: false
       }
     },
     mounted () {

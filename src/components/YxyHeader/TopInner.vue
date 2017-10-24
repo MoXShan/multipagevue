@@ -5,11 +5,11 @@
       <div id="navbar">
         <ul class="ul-nav">
           <li><a href="/">首页</a><span></span></li>
-          <li><a href="#">OA办公</a></li>
-          <li><a href="#">资源管理</a></li>
-          <li><a href="#">运营管理</a></li>
-          <li><a href="#">统计分析</a></li>
-          <li><a href="#">教学研究</a></li>
+          <li><a href="#">标题一</a></li>
+          <li><a href="#">标题二</a></li>
+          <li><a href="#">标题三</a></li>
+          <li><a href="#">标题四</a></li>
+          <li><a href="#">标题五</a></li>
         </ul>
         <ul class="ul-list">
           <li v-if="user.authenticated">
