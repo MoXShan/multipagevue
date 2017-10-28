@@ -2,7 +2,7 @@
 import axios from 'axios'
 import Vue from 'vue'
 import { Message } from 'element-ui'
-
+// https://www.npmjs.com/package/vue-axios这种方法更好
 // 创建axios实例
 const service = axios.create({
   timeout: 10000,
